@@ -2,6 +2,7 @@ import { useProducts } from "../../../providers/produtos/";
 import { Products } from "../../../components/Home/styles"
 import { useCart } from "../../../providers/cart";
 import { useHistory } from "react-router-dom";
+import { Container } from "./styles";
 
 export const ProductBadyBodyWorks = () => {
     const { handleAddToCart } = useCart();
@@ -11,7 +12,7 @@ export const ProductBadyBodyWorks = () => {
     const style2 = {backgroundColor: "#00a000"}
     const history = useHistory();
     return (
-        <div>
+        <Container>
             {productBadyeBodyWorks.map(prod => (
             <Products key={prod.id}>
             <img src={prod.image} alt={prod.name} />
@@ -27,6 +28,6 @@ export const ProductBadyBodyWorks = () => {
                 <button onClick={() => handleAddToCart(prod)}>Adicionar</button>
         </Products>
             ))}
-        </div>
+        </Container>
     )
 }

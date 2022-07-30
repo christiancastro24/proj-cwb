@@ -2,6 +2,7 @@ import { useProducts } from "../../../providers/produtos/";
 import { Products } from "../../../components/Home/styles"
 import { useCart } from "../../../providers/cart";
 import { useHistory } from "react-router-dom";
+import { Container } from "./styles";
 
 export const ProductFractionals = () => {
     const { productFractionals } = useProducts();
@@ -12,7 +13,7 @@ export const ProductFractionals = () => {
     const history = useHistory();
 
     return (
-        <div>
+        <Container>
             {productFractionals.map(prod => (
             <Products key={prod.id}>
        <img src={prod.image} alt={prod.name} />
@@ -28,6 +29,6 @@ export const ProductFractionals = () => {
                 <button onClick={() => handleAddToCart(prod)}>Adicionar</button>
             </Products>
             ))}
-        </div>
+        </Container>
     )
 }
