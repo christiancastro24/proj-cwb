@@ -15,13 +15,19 @@ export const Container = styled.div `
     .total-price {
         flex: 1;
         width: 300px;
-        height: auto;
+        height: 130px;
         background-color: pink;
         text-align: center;
         border-radius: 10px;
         margin-right: 15px;
         display: flex;
         flex-direction: column;
+
+        button {
+            width: 50%;
+            textalign: center;
+            margin: 10px auto;
+        }
 
         h2 {
             font-size: 20px;

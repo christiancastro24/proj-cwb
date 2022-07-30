@@ -9,6 +9,7 @@ export const CartComp = () => {
 
     const { removeItem, cart , handleAddToCart, removeAllItems } = useCart();
     const total = cart.reduce((acc, tot) => acc + tot.quantity * tot.price, 0).toFixed(2);
+    const lengthItems = cart.length > 1 ? `Subtotal ${cart.length} items` : `Subtotal ${cart.length} item`
 
     const finalizarPedido = () => {
         return (
@@ -48,16 +49,11 @@ export const CartComp = () => {
     </div>
     {total !== 0 &&
         <div className="total-price">
-            {cart.map(prodCart => (
-                <div className="total-items">
-                    <img src={prodCart.image} alt={prodCart.name} height={150}/>
-                    <h5>{prodCart.name}</h5>
-                    <h6>Quantidade: {prodCart.quantity}</h6>
-                    <br />
-                </div>
-            ))}
-                <Button onClick={finalizarPedido} colorScheme='blue' mr={3}>Finalizar Pedido</Button>
+            <div>
+                <h2>{lengthItems}</h2>
+            </div>
             <h2>TOTAL: <strong>R$ {total}</strong></h2>
+                <Button onClick={finalizarPedido} colorScheme='red' mr={3}>Finalizar Pedido</Button>
         </div>
         }
             </Container>
