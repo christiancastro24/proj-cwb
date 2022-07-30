@@ -23,7 +23,7 @@ export const Routes = () => {
             <Route path="/victoriaSecrets"> <ProductVictoriaSecrets /> </Route>
             <Route path="/badybodyworks"> <ProductBadyBodyWorks /> </Route>
             <Route path="/importedPerfumes"> <ProductImportedPerfumes /> </Route>
-            <Route path="/winterItems"> <ProductWinterItems /> </Route>
+            <Route path="/variedades"> <ProductWinterItems /> </Route>
             <Route path="/loreal"> <ProductLoreal /> </Route>
             <Route path="/bedHead"> <ProductBedHead /> </Route>
             <Route path="/fractionals"> <ProductFractionals /> </Route>
