@@ -8,7 +8,7 @@ import { Input }from '@chakra-ui/react';
 import { GrContact } from "react-icons/gr"
 import { useProducts } from "../../providers/produtos";
 import { useState } from "react";
-import { Button, useDisclosure, Modal, ModalOverlay, ModalContent, ModalBody, Text, ModalCloseButton, ModalFooter } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
 
 export const Header = () => {
 
@@ -23,7 +23,6 @@ export const Header = () => {
     const searchItem = (inputValue) => {
         const result = products.map(prod => prod).filter(p => p.name.toLowerCase().includes(inputValue.toLowerCase()))
         setFiltProd(result)
-        onOpen
     }
 
     return (

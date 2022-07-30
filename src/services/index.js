@@ -11,7 +11,7 @@ export const ProductsHome = [
         name: "Sebastian",
         image: imageProd1,
         hasStock: true,
-        path: "/sebastian"
+        path: "/sebastian",
     },
     {
         id: 2,

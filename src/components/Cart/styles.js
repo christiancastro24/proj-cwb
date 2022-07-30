@@ -2,16 +2,49 @@ import styled from "styled-components"
 
 export const Container = styled.div `
     display: flex;
-    // justify-content: center;
     flex-wrap: wrap;
-    // flex-direction: row !important;
     width: 100%;
+    justify-content: center;
+
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 3;
+    }
+
+    .total-price {
+        flex: 1;
+        width: 300px;
+        height: auto;
+        background-color: pink;
+        text-align: center;
+        border-radius: 10px;
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-size: 20px;
+            padding-right: 15px;
+        }
+       
+        .total-items {
+            text-align: left;
+            margin: 10px;
+            img {
+                height: 70px;
+                border-radius: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
 `
 
 export const ContainerCart = styled.div `
     display: flex;
     justify-content: center;
-    margin: 10px;
+    margin: 5px;
 
     span {
         cursor: pointer;
