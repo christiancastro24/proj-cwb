@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const HeaderTitle = styled.header`
+    background-color: #f08fa9;
+    height: 27px;
+    h1{
+        font-size: 0.8rem;
+        text-align: center;
+        font-weight: 300;
+        color: white;
+    }
+`
+
 export const Container = styled.main `
     margin-left: auto;
     // margin-right: 3rem;
@@ -22,7 +33,19 @@ export const Container = styled.main `
         cursor: pointer;
     }
 
-    span {
-        margin-right: 50px;
+    input::placeholder {
+        color: #f08fa9;
+        font-size: 0.8rem
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span{
+            padding-top: 5px;
+            font-size: 12px;
+            color: #f08fa9;
+        }
     }
 `

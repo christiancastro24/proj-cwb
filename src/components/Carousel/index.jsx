@@ -2,9 +2,12 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container } from "./styles";
 
-import banner1 from "../../assets/images/banner1.jpg";
-import banner4 from "../../assets/images/banner3.webp";
-import banner5 from "../../assets/images/banner4.png";
+import product_one from "../../assets/images/product_1.jpg"
+import product_two from "../../assets/images/product_2.jpg"
+import product_three from "../../assets/images/product_3.jpg"
+import product_four from "../../assets/images/product_4.jpg"
+import product_five from "../../assets/images/product_5.jpg"
+import product_six from "../../assets/images/product_6.jpg"
 import { Link } from "react-router-dom";
 
 export const CarouselHome = () => {
@@ -25,10 +28,10 @@ export const CarouselHome = () => {
     <>
       <Carousel
         renderArrowsWhenDisabled={true}
-        swipeable={false}
-        draggable={false}
+        swipeable={true}
+        draggable={true}
         showDots={false}
-        arrows={false}
+        arrows={true}
         responsive={responsive}
         ssr={true}
         infinite={true}
@@ -38,16 +41,36 @@ export const CarouselHome = () => {
         transitionDuration={2200}
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
-        focusOnSelect={false}
+        focusOnSelect={true}
       >
         <Container>
           <Link to="/">
-            <img src={banner5} alt="banner2" />
+            <img src={product_one} alt="Produto 1" />
           </Link>
         </Container>
         <Container>
           <Link to="/">
-            <img src={banner1} alt="banner3" />
+            <img src={product_two} alt="Produto 2" />
+          </Link>
+        </Container>
+        <Container>
+          <Link to="/">
+            <img src={product_three} alt="Produto 3" />
+          </Link>
+        </Container>
+        <Container>
+          <Link to="/">
+            <img src={product_four} alt="Produto 4" />
+          </Link>
+        </Container>
+        <Container>
+          <Link to="/">
+            <img src={product_five} alt="Produto 5" />
+          </Link>
+        </Container>
+        <Container>
+          <Link to="/">
+            <img src={product_six} alt="Produto 6" />
           </Link>
         </Container>
       </Carousel>

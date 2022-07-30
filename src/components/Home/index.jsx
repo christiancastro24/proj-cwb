@@ -1,8 +1,8 @@
 import { useProducts } from "../../providers/produtos"
 import { Container, Products, Header } from "./styles";
-import { Button } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react';
 import { useHistory } from "react-router-dom";
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
 export const HomeComp = () => {
     const { products } = useProducts();

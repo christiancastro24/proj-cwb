@@ -6,10 +6,11 @@ export const Container = styled.div`
   justify-content: center;
   
   img {
-    width: 62vw;
+    width: 79vw;
     height: 70vh;
     z-index: -1;
-    
+    border-radius: 20px;
+    margin-top: 17px;
   }
 
   @media (min-width: 320px) and (max-width: 1024px) {

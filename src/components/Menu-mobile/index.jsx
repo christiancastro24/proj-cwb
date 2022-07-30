@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { Container, Items } from "./styles";
 import { useHistory } from "react-router-dom";
-import menu from "../../assets/images/menu.png"
+import menu from "../../assets/images/menu.png";
+import useWindowSize from '../../utils/useWindowSize';
 
 
 import {
@@ -21,8 +22,15 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef()
   const history = useHistory()
+  
+  // configure width for conditional responsive
+  const { width } = useWindowSize();
+  const isMobile = width && width < 768;
 
   return (
+    <>
+    {
+      isMobile &&     
     <Container>
       <img  src={menu} alt="image-burguer" ref={btnRef} colorScheme='teal' onClick={onOpen} />
       <Drawer
@@ -52,6 +60,8 @@ export default function Navbar() {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-    </Container>
+      </Container>
+    }
+    </>
   )
 }
