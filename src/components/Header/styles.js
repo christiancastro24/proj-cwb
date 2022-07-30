@@ -14,7 +14,6 @@ export const HeaderTitle = styled.header`
 
 export const Container = styled.main `
     margin-left: auto;
-    // margin-right: 3rem;
     height: 115px;
     width: 95%;
     background-color: #f2f2f2;
@@ -48,5 +47,22 @@ export const Container = styled.main `
             font-size: 12px;
             color: #f08fa9;
         }
+    }
+`
+
+export const ContainerProducts = styled.div `
+    background-color: #fff;
+    border: 5px solid #fff;
+    height: auto;
+    width: 250px;
+    color: #000;
+    gap: 22px;
+    position: relative;
+    z-index: 2;
+    margin-top: 40%;
+    right: 30%;
+
+    img {
+        height: 200px;
     }
 `

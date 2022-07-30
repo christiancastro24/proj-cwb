@@ -50,10 +50,10 @@ export const ProductsHome = [
     },
     {
         id: 7,
-        name: "Artigos Inverno",
+        name: "Variedades",
         image: imageProd1,
         hasStock: true,
-        path: "/winterItems"
+        path: "/variedades"
     },
     {
         id: 8,
