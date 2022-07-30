@@ -4,6 +4,7 @@ export const HeaderTitle = styled.header`
     background-color: #f08fa9;
     height: 27px;
     h1{
+        margin-top: 3px;
         font-size: 0.8rem;
         text-align: center;
         font-weight: 300;
