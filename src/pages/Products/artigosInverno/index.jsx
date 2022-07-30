@@ -2,6 +2,7 @@ import { useProducts } from "../../../providers/produtos/";
 import { Products } from "../../../components/Home/styles"
 import { useCart } from "../../../providers/cart";
 import { useHistory } from "react-router-dom";
+import { Container } from "./styles";
 
 export const ProductWinterItems = () => {
     const { productWinterItems } = useProducts();
@@ -12,7 +13,7 @@ export const ProductWinterItems = () => {
     const history = useHistory();
 
     return (
-        <div>
+        <Container>
             {productWinterItems.map(prodT => (
             <Products key={prodT.id}>
           <img src={prodT.image} alt={prodT.name} />
@@ -28,6 +29,6 @@ export const ProductWinterItems = () => {
                 <button onClick={() => handleAddToCart(prodT)}>Adicionar</button>
             </Products>
             ))}
-        </div>
+        </Container>
     )
 }

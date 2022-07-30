@@ -2,6 +2,7 @@ import { useProducts } from "../../../providers/produtos/";
 import { Products } from "../../../components/Home/styles"
 import { useCart } from "../../../providers/cart";
 import { useHistory } from "react-router-dom";
+import { Container } from "../artigosInverno/styles";
 
 export const ProductWella = () => {
     const { productWella } = useProducts();
@@ -12,10 +13,10 @@ export const ProductWella = () => {
     const history = useHistory();
 
     return (
-        <div>
+        <Container>
         {productWella.map(prod => (
         <Products key={prod.id}>
- <img src={prod.image} alt={prod.name} />
+        <img src={prod.image} alt={prod.name} />
             {prod.hasStock ? 
                    <strong className="hidden" style={style}>Sem Estoque</strong>
                    :   
@@ -28,6 +29,6 @@ export const ProductWella = () => {
                 <button onClick={() => handleAddToCart(prod)}>Adicionar</button>
         </Products>
         ))}
-    </div>
+    </Container>
     )
 }
