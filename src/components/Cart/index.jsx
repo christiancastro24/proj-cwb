@@ -11,10 +11,16 @@ export const CartComp = () => {
     const total = cart.reduce((acc, tot) => acc + tot.quantity * tot.price, 0).toFixed(2);
     const lengthItems = cart.length > 1 ? `Subtotal ${cart.length} items` : `Subtotal ${cart.length} item`
 
-    const finalizarPedido = () => {
+
+    const teste = cart.map(cart => cart.name)
+    const qtd = cart.map(cart => cart.quantity)
+
+    const finalizarPedido = (e) => {
+        const msgEndOrder = 
+                `
+                    ${teste} \n ${qtd}`
         return (
-            // <a href="https://api.whatsapp.com/send/?phone=41999144840&text&type=phone_number&app_absent=0" target="_blank">{total}</a>
-            window.location.href = "https://api.whatsapp.com/send?phone=41999144840&text&type=phone_number&app_absent=0"
+            window.location.href = `https://api.whatsapp.com/send?phone=55041999144840&text=${msgEndOrder}&type=phone_number&app_absent=0`
         )
     }
 
