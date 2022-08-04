@@ -9,6 +9,7 @@ import {
   useDisclosure,
   Button,
   DrawerFooter,
+  Input,
 } from '@chakra-ui/react'
 import { BsCart4 } from "react-icons/bs"
 import { useCart } from "../../providers/cart"
@@ -17,6 +18,8 @@ import { AiOutlinePlus } from "react-icons/ai"
 import { RiSubtractFill } from "react-icons/ri"
 import { motion } from 'framer-motion';
 import { useHistory } from "react-router-dom"
+import { toast } from "react-toastify"
+import { cupomDesconto } from "../../utils/cupoms"
 
 // Estilos Externos
 import { 
@@ -28,11 +31,15 @@ import {
 export const CartComp = () => {
     const [size, setSize] = useState('')
     const history = useHistory();
+
+    const [inputValue, setInputValue] = useState('')
+    const [cupumValidate, setCumumValidate] = useState(true)
     
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { cart, removeItem, removeAllItems, handleAddToCart } = useCart();
 
-    const total = cart.reduce((acc, tot) => acc + tot.quantity * tot.price, 0).toFixed(2);
+
+    const [total, setTotal] = useState(cart.reduce((acc, tot) => acc + tot.quantity * tot.price, 0).toFixed(2))
     const qtd = cart.map(quant => quant.quantity).reduce((a, b) => a + b, 0)
 
     const lengthItems = cart.length > 1 ? `${cart.length} items - ${qtd} Quantidades` : `${cart.length} item - ${qtd} Quantidade`
@@ -50,12 +57,23 @@ export const CartComp = () => {
 
     }
   
-    const finalizarPedido = () => {
+    const finishOrder = () => {
       const msgEndOrder = `Olá! Gostaria de um atendimento`
       return (
           window.location.href = `https://api.whatsapp.com/send?phone=55041999144840&text=${msgEndOrder}&type=phone_number&app_absent=0`
       )
   }
+
+  const applyDiscount = () => {
+   if (cupomDesconto === inputValue) {
+    setTotal((total * 0.20).toFixed(2))
+    setCumumValidate(false)
+    toast.success('Cupom aplicado!')
+
+  } else {
+    toast.error('Cupom inválido!')
+  }
+}
 
   
     return (
@@ -115,10 +133,32 @@ export const CartComp = () => {
                       <h2 style={lengthItemsCart}>&nbsp;&nbsp;&nbsp;{lengthItems}</h2>
                   </div>
                 </div>
+              {cupumValidate  &&
+                <div style={{display: "flex", justifyContent: "center", margin: "10px"}}>
+                  <Input 
+                    placeholder="CUPOM DE DESCONTO" 
+                    width={270}
+                    style={{border: "3px solid pink"}}         
+                    value={inputValue}
+                    onChange={e => setInputValue(e.target.value)}
+                  />
+                  {" "}
+                  {" "}
+                  <Button
+                    style={{width: "auto", marginLeft: "10px"}}
+                    colorScheme='purple'
+                    onClick={applyDiscount}
+                    py={3}
+                    width={270}  
+                    mb={1}
+                  >Aplicar</Button>
+                </div>
+                }
+
               <DrawerFooter>
                 <Button
                 colorScheme='pink'
-                onClick={finalizarPedido}
+                onClick={finishOrder}
                 py={6}
                 style={ButtonFinishOrder}
                 mb={1}>Finalizar Pedido</Button>
