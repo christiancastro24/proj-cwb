@@ -1,8 +1,8 @@
 import { useProducts } from "../../../providers/produtos/";
 import { Products } from "../../../components/Home/styles"
 import { useCart } from "../../../providers/cart";
-import { useHistory } from "react-router-dom";
 import { Container } from "../artigosInverno/styles";
+import { motion } from 'framer-motion';
 
 export const ProductWella = () => {
     const { productWella } = useProducts();
@@ -10,9 +10,14 @@ export const ProductWella = () => {
 
     const style = {backgroundColor: "#cc0000"}
     const style2 = {backgroundColor: "#00a000"}
-    const history = useHistory();
 
     return (
+        <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.9 }}
+      >
         <Container>
         {productWella.map(prod => (
         <Products key={prod.id}>
@@ -30,5 +35,6 @@ export const ProductWella = () => {
         </Products>
         ))}
     </Container>
+    </motion.div>
     )
 }

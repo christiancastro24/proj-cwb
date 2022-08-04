@@ -7,14 +7,12 @@ export const Container = styled.div`
   
   img {
     width: 79vw;
-    height: 70vh;
+    height: auto;
     z-index: -1;
     border-radius: 20px;
-    margin-top: 17px;
-  }
+    // margin-top: 17px;
+    margin: 17px auto;
 
-  @media (min-width: 320px) and (max-width: 1024px) {
-    display: none;
   }
   
   @media (min-width: 1200px) {

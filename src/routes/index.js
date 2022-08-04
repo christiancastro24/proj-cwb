@@ -6,7 +6,6 @@ import { ProductBadyBodyWorks } from "../pages/Products/badybodyworks";
 import { ProductWella } from "../pages/Products/wella";
 import { ProductImportedPerfumes } from "../pages/Products/perfumesImportados";
 import { ProductWinterItems } from "../pages/Products/artigosInverno";
-import { Cart } from "../pages/Cart";
 import { Home } from "../pages/Home";
 import { ProductLoreal } from "../pages/Products/loreal";
 import { ProductBedHead } from "../pages/Products/bedHead";
@@ -16,7 +15,6 @@ export const Routes = () => {
     return (
         <Switch>
             <Route exact path="/"> <Home /> </Route>
-            <Route path="/cart"> <Cart /> </Route>
             <Route path="/sebastian"> <ProductSebastian /> </Route>
             <Route path="/truss"> <ProductTruss /> </Route>
             <Route path="/wella"> <ProductWella /> </Route>

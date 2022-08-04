@@ -1,29 +1,34 @@
 import { Container, ContainerProducts, HeaderTitle } from "./styles"
 import logo from "../../assets/images/logotipo.png"
-import { BsCart4 } from "react-icons/bs"
 import { useHistory } from "react-router-dom";
 import Navbar from "../Menu-mobile";
 import { useCart } from "../../providers/cart";
-import { Input }from '@chakra-ui/react';
 import { GrContact } from "react-icons/gr"
 import { useProducts } from "../../providers/produtos";
 import { useState } from "react";
-import { Button } from '@chakra-ui/react'
+import { BiArrowFromLeft } from "react-icons/bi"
+import useWindowSize from "../../utils/useWindowSize";
+import { Input } from "@chakra-ui/react";
+import { CartComp } from "../Cart";
 
 export const Header = () => {
 
     const { handleAddToCart } = useCart()
-
     const { products } = useProducts();
+    const { width } = useWindowSize();
     const history = useHistory();
-    const [filtProd, setFiltProd] = useState([])
     const [inputValue, setInputValue] = useState("")
     
+        
+    const filteredRepos = products.filter(p => p.name.toLowerCase().includes(inputValue.toLowerCase()))
 
-    const searchItem = (inputValue) => {
-        const result = products.map(prod => prod).filter(p => p.name.toLowerCase().includes(inputValue.toLowerCase()))
-        setFiltProd(result)
+    const contact = () => {
+        const msgEndOrder = `Olá!`
+        return (
+            window.location.href = `https://api.whatsapp.com/send?phone=55041999144840&text=${msgEndOrder}&type=phone_number&app_absent=0`
+        )
     }
+  
 
     return (
         <>
@@ -33,22 +38,32 @@ export const Header = () => {
         <Container>
             <img src={logo} alt="logo" onClick={() => history.push("/")} title={`Inicio`}/>
             <Navbar />
-            <Input value={inputValue} onChange={e => setInputValue(e.target.value)} fontSize={"0.8rem"} borderColor={"#f08fa9"} color="#f08fa9" width={423} placeholder="O que você está buscando?" />
-            <Button colorScheme='blue' mr={3} onClick={() => searchItem(inputValue)}>Buscar</Button>
 
-            {filtProd?.map(prod => (
-               <ContainerProducts>
-                  <img src={prod.image} alt={prod.name} />
-                  <h3>{prod.name}</h3>
-                  <Button colorScheme="red" onClick={() => {handleAddToCart(prod); setFiltProd([])}}>Adicionar</Button>
-                </ContainerProducts>
-            ))}
-            <div>
-                <GrContact />
-                <span>Atendimento</span>
-            </div>
-            <div>
-                <BsCart4 color="#f08fa9" style={{ cursor: "pointer" }} onClick={() => history.push('/cart')}></BsCart4>
+            {width >= 768 && 
+                <Input type="search" value={inputValue} onChange={e => setInputValue(e.target.value)} placeholder="Procure por Categoria..." />
+            }
+    
+
+            {inputValue.length > 0 && (
+                filteredRepos.map(prod => (
+                    <ContainerProducts>
+                        <div style={{display: "flex"}}>
+                       <img src={prod.image} alt={prod.name} onClick={() => {history.push(prod.path); setInputValue("")}}/>
+                       <h3>{prod.name}</h3>
+                        </div>
+                       <BiArrowFromLeft color="#000" size="30" onClick={() => {history.push(prod.path); setInputValue("")}}/>
+                     </ContainerProducts>
+                 ))
+            )
+                }
+            {width >= 768 &&
+                <div>
+                    <GrContact onClick={contact} style={{cursor: "pointer"}}/>
+                    <span>Atendimento</span>
+                </div>
+            }
+            <div>      
+            <CartComp />
                 <span>Meu Carrinho</span>
             </div>
         </Container>

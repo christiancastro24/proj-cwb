@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderTitle = styled.header`
     background-color: #f08fa9;
-    height: 27px;
+    height: 34px;
     h1{
         margin-top: 3px;
         font-size: 0.8rem;
@@ -38,6 +38,12 @@ export const Container = styled.main `
         font-size: 0.8rem
     }
 
+    input {
+        border: 1px solid #000;
+        color: #000;
+        width: 20rem;
+    }
+
     div{
         display: flex;
         flex-direction: column;
@@ -52,17 +58,28 @@ export const Container = styled.main `
 
 export const ContainerProducts = styled.div `
     background-color: #fff;
-    border: 5px solid #fff;
-    height: auto;
-    width: 250px;
-    color: #000;
-    gap: 22px;
-    position: relative;
-    z-index: 2;
-    margin-top: 40%;
-    right: 30%;
+    position: absolute;
+    z-index: 99999;
+    top: 18.3%;
+    width: 20rem;
+    left: 38.5%;
+    padding: 1rem 5rem;
+    max-height: calc(60vh - 60px);
+    border-radius: 0 0 3rem 3rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: #f08fa9;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0 0 0.5em #f08fa9;
+    cursor: pointer;
 
     img {
-        height: 200px;
+        height: 100px;
+        width: 100px;
+        margin: 0.5rem;
+        border-radius: 100%;
     }
 `

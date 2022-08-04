@@ -13,12 +13,12 @@ import { Link } from "react-router-dom";
 export const CarouselHome = () => {
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 450 },
+      breakpoint: { max: 3000, min: 359 },
       items: 1,
       slidesToSlide: 1,
     },
     mobile: {
-      breakpoint: { max: 450, min: 0 },
+      breakpoint: { max: 359, min: 0 },
       items: 0,
       slidesToSlide: 0,
     },
@@ -30,8 +30,8 @@ export const CarouselHome = () => {
         renderArrowsWhenDisabled={true}
         swipeable={true}
         draggable={true}
-        showDots={false}
-        arrows={true}
+        showDots={true}
+        arrows={false}
         responsive={responsive}
         ssr={true}
         infinite={true}

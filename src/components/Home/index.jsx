@@ -1,12 +1,22 @@
 import { useProducts } from "../../providers/produtos"
-import { Container, Products, Header } from "./styles";
+import { Container, Products, Header, WhatsApp } from "./styles";
 import { Button } from '@chakra-ui/react';
 import { useHistory } from "react-router-dom";
 import { motion } from 'framer-motion';
+import wpp from "../../assets/images/whatsapp.png"
 
 export const HomeComp = () => {
     const { products } = useProducts();
     const history = useHistory();
+
+    const styleH1 = {textAlign: 'center', margin: "1rem", fontSize: "3rem", fontFamily: "Anton, sansSerif", color: "#f08fa9"}
+
+    const contact = () => {
+        const msgEndOrder = `Olá! Gostaria de um atendimento`
+        return (
+            window.location.href = `https://api.whatsapp.com/send?phone=55041999144840&text=${msgEndOrder}&type=phone_number&app_absent=0`
+        )
+    }
 
     return (
      <motion.div 
@@ -15,6 +25,7 @@ export const HomeComp = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.9 }}
       >
+        <h1 style={styleH1}>Categorias</h1>
         <Container>
             {products.map(prod => (
                 <Products key={prod.id}>
@@ -25,7 +36,9 @@ export const HomeComp = () => {
                 </Products>
             ))}
 
-            {/* <img src={} alt="wpp" /> */}
+            <WhatsApp>
+                <img onClick={contact} className=".img" src={wpp} alt="WhatsApp" />
+            </WhatsApp>
             <Header>
                 Copyright © 2022 RC Digital, Todos os direitos reservados.
             </Header>

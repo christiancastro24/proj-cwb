@@ -109,3 +109,23 @@ export const Header = styled.header `
     justify-content: center;
     height: 5.01rem;
 `
+
+export const WhatsApp = styled.div `
+    img {
+        height: 55px;
+        position: absolute; 
+        left: 83%; 
+        top:  90%;
+        cursor: pointer;
+    }
+
+    @media (min-width: 1024px) {
+        img {
+            position: absolute; 
+            left: 93%; 
+            top:  90%;
+            cursor: pointer;
+        }
+    }
+  
+`
