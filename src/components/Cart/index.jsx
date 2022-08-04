@@ -34,12 +34,13 @@ export const CartComp = () => {
 
     const [inputValue, setInputValue] = useState('')
     const [cupumValidate, setCumumValidate] = useState(true)
+    const [discount, setDiscount] = useState(0)
     
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { cart, removeItem, removeAllItems, handleAddToCart } = useCart();
 
 
-    const [total, setTotal] = useState(cart.reduce((acc, tot) => acc + tot.quantity * tot.price, 0).toFixed(2))
+    let total =  cart.reduce((acc, tot) => acc + tot.quantity * tot.price, 0)
     const qtd = cart.map(quant => quant.quantity).reduce((a, b) => a + b, 0)
 
     const lengthItems = cart.length > 1 ? `${cart.length} items - ${qtd} Quantidades` : `${cart.length} item - ${qtd} Quantidade`
@@ -59,14 +60,17 @@ export const CartComp = () => {
   
     const finishOrder = () => {
       const msgEndOrder = `Olá! Gostaria de um atendimento`
-      return (
+          localStorage.clear();
           window.location.href = `https://api.whatsapp.com/send?phone=55041999144840&text=${msgEndOrder}&type=phone_number&app_absent=0`
-      )
   }
 
   const applyDiscount = () => {
    if (cupomDesconto === inputValue) {
-    setTotal((total * 0.20).toFixed(2))
+    const discountFirst = total * 0.20 / 100
+    console.log(total)
+    console.log(discountFirst)
+    console.log(total - discountFirst)
+    setDiscount(total - (total * discountFirst))
     setCumumValidate(false)
     toast.success('Cupom aplicado!')
 
@@ -75,6 +79,7 @@ export const CartComp = () => {
   }
 }
 
+  const discountFixed = discount && discount.toFixed(2)
   
     return (
       <>
@@ -127,7 +132,7 @@ export const CartComp = () => {
             </div>
                 :
                 <>
-                  <h2 style={totalPrice}>&nbsp;Total: <span>R$ {total}</span></h2>
+                  <h2 style={totalPrice}>&nbsp;Total: <span>R$ {cupumValidate ? total : discount}</span></h2>
                 <div style={lengthCart}>
                   <div>
                       <h2 style={lengthItemsCart}>&nbsp;&nbsp;&nbsp;{lengthItems}</h2>
@@ -138,12 +143,10 @@ export const CartComp = () => {
                   <Input 
                     placeholder="CUPOM DE DESCONTO" 
                     width={270}
-                    style={{border: "3px solid pink"}}         
+                    style={{border: "3px solid pink", textTransform: "uppercase"}}         
                     value={inputValue}
                     onChange={e => setInputValue(e.target.value)}
                   />
-                  {" "}
-                  {" "}
                   <Button
                     style={{width: "auto", marginLeft: "10px"}}
                     colorScheme='purple'
