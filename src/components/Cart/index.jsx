@@ -59,7 +59,7 @@ export const CartComp = () => {
     }
   
     const finishOrder = () => {
-      const msgEndOrder = `Olá! Gostaria de um atendimento`
+      const msgEndOrder = `Olá! Gostaria de um atendimento - Valor total: ${total}`
           localStorage.clear();
           window.location.href = `https://api.whatsapp.com/send?phone=55041999144840&text=${msgEndOrder}&type=phone_number&app_absent=0`
   }
