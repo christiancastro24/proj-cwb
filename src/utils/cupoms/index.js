@@ -2,4 +2,4 @@
  * @Cupom de desconto
  */
 
-export const cupomDesconto = "amo20"
+export const cupomDesconto = "amo15"

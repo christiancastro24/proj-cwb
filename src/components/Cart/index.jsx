@@ -40,7 +40,7 @@ export const CartComp = () => {
     const { cart, removeItem, removeAllItems, handleAddToCart } = useCart();
 
 
-    let total =  cart.reduce((acc, tot) => acc + tot.quantity * tot.price, 0)
+    let total =  cart.reduce((acc, tot) => acc + tot.quantity * tot.price, 0).toFixed(2)
     const qtd = cart.map(quant => quant.quantity).reduce((a, b) => a + b, 0)
 
     const lengthItems = cart.length > 1 ? `${cart.length} items - ${qtd} Quantidades` : `${cart.length} item - ${qtd} Quantidade`
@@ -66,11 +66,7 @@ export const CartComp = () => {
 
   const applyDiscount = () => {
    if (cupomDesconto === inputValue) {
-    const discountFirst = total * 0.20 / 100
-    console.log(total)
-    console.log(discountFirst)
-    console.log(total - discountFirst)
-    setDiscount(total - (total * discountFirst))
+    setDiscount(Math.floor((total/100)*85))
     setCumumValidate(false)
     toast.success('Cupom aplicado!')
 
@@ -78,6 +74,7 @@ export const CartComp = () => {
     toast.error('Cupom inválido!')
   }
 }
+  console.log(discount)
 
   const discountFixed = discount && discount.toFixed(2)
   
@@ -132,7 +129,7 @@ export const CartComp = () => {
             </div>
                 :
                 <>
-                  <h2 style={totalPrice}>&nbsp;Total: <span>R$ {cupumValidate ? total : discount}</span></h2>
+                  <h2 style={totalPrice}>&nbsp;Total: <span>R$ {cupumValidate ? total : discountFixed}</span></h2>
                 <div style={lengthCart}>
                   <div>
                       <h2 style={lengthItemsCart}>&nbsp;&nbsp;&nbsp;{lengthItems}</h2>
