@@ -2,12 +2,12 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container } from "./styles";
 
-import product_one from "../../assets/images/product_1.jpg"
-import product_two from "../../assets/images/product_2.jpg"
-import product_three from "../../assets/images/product_3.jpg"
-import product_four from "../../assets/images/product_4.jpg"
-import product_five from "../../assets/images/product_5.jpg"
-import product_six from "../../assets/images/product_6.jpg"
+import product_one from "../../assets/images/bannersHome/product_1.jpg"
+import product_two from "../../assets/images/bannersHome/product_2.jpg"
+import product_three from "../../assets/images/bannersHome/product_3.jpg"
+import product_four from "../../assets/images/bannersHome/product_4.jpg"
+import product_five from "../../assets/images/bannersHome/product_5.jpg"
+import product_six from "../../assets/images/bannersHome/product_6.jpg"
 import { Link } from "react-router-dom";
 
 export const CarouselHome = () => {

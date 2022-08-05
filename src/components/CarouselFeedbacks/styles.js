@@ -6,12 +6,12 @@ export const Container = styled.div`
   justify-content: center;
   
   img {
-    width: 79vw;
+    width: auto;
     height: auto;
     z-index: -1;
     border-radius: 20px;
     // margin-top: 17px;
-    margin: 5px auto;
+    margin: 0px auto;
 
   }
   

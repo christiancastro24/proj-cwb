@@ -3,7 +3,7 @@ import { Container, Products, Header, WhatsApp } from "./styles";
 import { Button } from '@chakra-ui/react';
 import { useHistory } from "react-router-dom";
 import { motion } from 'framer-motion';
-import wpp from "../../assets/images/whatsapp.png"
+import wpp from "../../assets/images/utils/whatsapp.png"
 
 export const HomeComp = () => {
     const { products } = useProducts();
@@ -26,6 +26,7 @@ export const HomeComp = () => {
         transition={{ duration: 0.9 }}
       >
         <h1 style={styleH1}>Categorias</h1>
+            <div style={{display: "flex", flexDirection: "column"}}>
         <Container>
             {products.map(prod => (
                 <Products key={prod.id}>
@@ -39,10 +40,8 @@ export const HomeComp = () => {
             <WhatsApp>
                 <img onClick={contact} className=".img" src={wpp} alt="WhatsApp" />
             </WhatsApp>
-            <Header>
-                Copyright © 2022 RC Digital, Todos os direitos reservados.
-            </Header>
         </Container>
+            </div>
         </motion.div>
     )
 }

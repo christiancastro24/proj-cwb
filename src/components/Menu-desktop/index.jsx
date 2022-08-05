@@ -22,7 +22,7 @@ export const MenuDesktop = () => {
                             <li onClick={() => history.push("/victoriaSecrets")}>Victoria Secrets</li>
                             <li onClick={() => history.push("/badybodyworks")}>Bady & Body Works</li>
                             <li onClick={() => history.push("/importedPerfumes")}>Perfumes Importados</li>
-                            <li onClick={() => history.push("/winterItems")}>Variedades</li>
+                            <li onClick={() => history.push("/variedades")}>Variedades</li>
                             <li onClick={() => history.push("/loreal")}>Loreal</li>
                             <li onClick={() => history.push("/bedHead")}>Bed Head</li>
                             <li onClick={() => history.push("/fractionals")}>Fracionados</li>

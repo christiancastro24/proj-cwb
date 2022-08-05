@@ -1,6 +1,6 @@
 import { Container, ContainerProducts, HeaderTitle } from "./styles"
-import logo from "../../assets/images/logotipo.png"
 import { useHistory } from "react-router-dom";
+import logo from "../../assets/images/utils/logotipo.png"
 import Navbar from "../Menu-mobile";
 import { useCart } from "../../providers/cart";
 import { GrContact } from "react-icons/gr"

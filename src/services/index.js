@@ -1,8 +1,8 @@
 /**
  * @Imports BannersHome
  */
-import imageProd1 from "../assets/images/prod1.png";
-import imageProd2 from "../assets/images/prod2.png";
+import imageProd1 from "../assets/images/categoriasHome/prod1.png";
+import imageProd2 from "../assets/images/categoriasHome/prod2.png";
 
 /* ----------------------------------------------*/
 

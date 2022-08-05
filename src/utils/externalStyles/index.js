@@ -134,7 +134,3 @@ export const ButtonFinishOrder = {
     lineHeight: "0.2rem",
     width: "70%"
 }
-
-/**
- * @Estilos do Componente Cart 
- */

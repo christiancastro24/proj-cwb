@@ -74,7 +74,6 @@ export const CartComp = () => {
     toast.error('Cupom inválido!')
   }
 }
-  console.log(discount)
 
   const discountFixed = discount && discount.toFixed(2)
   
@@ -135,7 +134,7 @@ export const CartComp = () => {
                       <h2 style={lengthItemsCart}>&nbsp;&nbsp;&nbsp;{lengthItems}</h2>
                   </div>
                 </div>
-              {cupumValidate  &&
+              {cupumValidate  && total >= 100 &&
                 <div style={{display: "flex", justifyContent: "center", margin: "10px"}}>
                   <Input 
                     placeholder="CUPOM DE DESCONTO" 

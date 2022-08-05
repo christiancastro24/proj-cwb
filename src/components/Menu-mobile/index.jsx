@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Container, Items } from "./styles";
 import { useHistory } from "react-router-dom";
-import menu from "../../assets/images/menu.png";
+import menu from "../../assets/images/utils/menu.png";
 import useWindowSize from '../../utils/useWindowSize';
 
 
