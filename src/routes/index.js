@@ -5,7 +5,7 @@ import { ProductVictoriaSecrets } from "../pages/Products/victoriaSecrets";
 import { ProductBadyBodyWorks } from "../pages/Products/badybodyworks";
 import { ProductWella } from "../pages/Products/wella";
 import { ProductImportedPerfumes } from "../pages/Products/perfumesImportados";
-import { ProductWinterItems } from "../pages/Products/artigosInverno";
+import { Variedades } from "../pages/Products/variedades";
 import { Home } from "../pages/Home";
 import { ProductLoreal } from "../pages/Products/loreal";
 import { ProductBedHead } from "../pages/Products/bedHead";
@@ -21,7 +21,7 @@ export const Routes = () => {
             <Route path="/victoriaSecrets"> <ProductVictoriaSecrets /> </Route>
             <Route path="/badybodyworks"> <ProductBadyBodyWorks /> </Route>
             <Route path="/importedPerfumes"> <ProductImportedPerfumes /> </Route>
-            <Route path="/variedades"> <ProductWinterItems /> </Route>
+            <Route path="/variedades"> <Variedades /> </Route>
             <Route path="/loreal"> <ProductLoreal /> </Route>
             <Route path="/bedHead"> <ProductBedHead /> </Route>
             <Route path="/fractionals"> <ProductFractionals /> </Route>

@@ -12,13 +12,13 @@ export const Products = styled.div `
 
     border: 3px solid pink;
     padding: 1.02rem 0.9375rem;
-    max-width: 15.8rem;
+    max-width: 12.8rem;
     background-color: #f2f2f6;
     box-shadow:inset 0 0 1em pink;
     text-align: center;
     margin: 1.5rem;
     word-break: break-all;
-    min-height: 11.224rem;
+    min-height: auto;
     background: #fff;
     border-radius: 10px;
     
@@ -72,7 +72,7 @@ export const Products = styled.div `
     img {
         overflow: hidden;
         height: 250px;
-        max-width: 15.8rem;
+        max-width: 12.7rem;
         position: relative;
         right: 16.3px;
         top: -19px;

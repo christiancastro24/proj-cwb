@@ -414,7 +414,7 @@ export const ProductImportedPerfumes = [
  /** 
  * @Produtos Artigos de Inverno
  */
-export const ProductWinterItems = [
+export const ProductVariedades = [
     {
         id: 1,
         name: "Produto 1 de Variedades",

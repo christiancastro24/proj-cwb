@@ -1,4 +1,4 @@
-import { useProducts } from "../../../providers/produtos/";
+import { useProducts } from "../../../providers/produtos";
 import { Products } from "../../../components/Home/styles"
 import { useCart } from "../../../providers/cart";
 import { Container } from "./styles";
@@ -17,22 +17,23 @@ import {
   ModalFooter,
 } from '@chakra-ui/react'
 
-export const ProductWinterItems = () => {
-    const { productWinterItems } = useProducts();
+export const Variedades = () => {
+    const { producVariedades } = useProducts();
     const { handleAddToCart } = useCart();
 
-    const [p, setP] = useState([])
+    const style = {backgroundColor: "#cc0000"}
+    const style2 = {backgroundColor: "#00a000"}
+    
+    const [product, setProduct] = useState([])
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     const finalRef = useRef(null)
 
-    const style = {backgroundColor: "#cc0000"}
-    const style2 = {backgroundColor: "#00a000"}
 
     const getId = (id) => {
-      const teste = productWinterItems.filter(x => x.id === id)
-      setP(teste)
-      onOpen(teste)
+      const productId = producVariedades.filter(x => x.id === id)
+      setProduct(productId)
+      onOpen(productId)
     }
 
     const addToCart = (item) => {
@@ -48,7 +49,7 @@ export const ProductWinterItems = () => {
       transition={{ duration: 0.9 }}
     >
         <Container>
-            {productWinterItems.map(prodT => (
+            {producVariedades.map(prodT => (
             <Products key={prodT.id}>
                 <>
                 <img src={prodT.image} alt={prodT.name} />
@@ -68,14 +69,14 @@ export const ProductWinterItems = () => {
                         <ModalHeader>Sobre o produto</ModalHeader>
                         <ModalCloseButton />
                         <ModalBody style={{margin: "0 auto"}}>
-                          {p.map(t => (
-                            <div key={t.id}>
-                            <img src={t.image} alt={t.name} style={{height: "250px", borderRadius: "100%", margin: "0 auto"}}/>
+                          {product.map(prodId => (
+                            <div key={prodId.id}>
+                            <img src={prodId.image} alt={prodId.name} style={{height: "250px", borderRadius: "100%", margin: "0 auto"}}/>
                               <br /> <br />
-                            <h2>{t.name}</h2>
+                            <h2>{prodId.name}</h2>
 
                             <strong>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</strong> 
-                            <Button style={{display: "block", margin: "0 auto"}} onClick={() => addToCart(t)}  colorScheme='pink'>Adicionar ao carrinho</Button>
+                            <Button style={{display: "block", margin: "0 auto"}} onClick={() => addToCart(prodId)}  colorScheme='pink'>Adicionar ao carrinho</Button>
                             </div>
                           ))}
                         </ModalBody>
