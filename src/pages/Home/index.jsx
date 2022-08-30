@@ -6,7 +6,9 @@ import { MenuDesktop } from "../../components/Menu-desktop"
 export const Home = () => {
     return (
         <div>
-            <MenuDesktop />
+            <br />
+            <br />
+            {/* <MenuDesktop /> */}
             <CarouselHome />
             <HomeComp />
             <CarouselFeedbacks />

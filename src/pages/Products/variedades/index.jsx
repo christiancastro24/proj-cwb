@@ -75,7 +75,7 @@ export const Variedades = () => {
                               <br /> <br />
                             <h2>{prodId.name}</h2>
 
-                            <strong>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</strong> 
+                            <strong>{prodId.description}</strong> 
                             <Button style={{display: "block", margin: "0 auto"}} onClick={() => addToCart(prodId)}  colorScheme='pink'>Adicionar ao carrinho</Button>
                             </div>
                           ))}

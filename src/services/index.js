@@ -28,6 +28,7 @@ import product_victoria_3 from "../assets/images/victoria_secrets/product_victor
 import product_victoria_4 from "../assets/images/victoria_secrets/product_victoria_4.jpeg";
 import product_victoria_5 from "../assets/images/victoria_secrets/product_victoria_5.jpeg";
 import product_victoria_6 from "../assets/images/victoria_secrets/product_victoria_6.jpeg";
+import product_victoria_7 from "../assets/images/victoria_secrets/product_victoria_7.jpg";
 
 
 
@@ -39,14 +40,12 @@ export const ProductsHome = [
         id: 1,
         name: "Sebastian",
         image: imageProd1,
-        hasStock: true,
         path: "/sebastian",
     },
     {
         id: 2,
         name: "Truss",
         image: imageProd2,
-        hasStock: true,
         path: "/truss"
     },
     {
@@ -60,7 +59,6 @@ export const ProductsHome = [
         id: 4,
         name: "Victoria Secrets",
         image: imageProd1,
-        hasStock: true,
         path: "/victoriaSecrets"
     },
     {
@@ -74,14 +72,12 @@ export const ProductsHome = [
         id: 6,
         name: "Perfumes Importados",
         image: imageProd1,
-        hasStock: true,
         path: "/importedPerfumes"
     },
     {
         id: 7,
         name: "Variedades",
         image: imageProd1,
-        hasStock: true,
         path: "/variedades"
     },
     {
@@ -95,14 +91,12 @@ export const ProductsHome = [
         id: 9,
         name: "Bed Head",
         image: imageProd1,
-        hasStock: true,
         path: "/bedHead"
     },
     {
         id: 10,
         name: "Fracionados",
         image: imageProd1,
-        hasStock: true,
         path: "/fractionals"
     },
 ]
@@ -117,42 +111,42 @@ export const ProductSebastian = [
         name: "Produto 1 da Marca Sebastian",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 2,
         name: "Produto 2 da Marca Sebastian",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 3,
         name: "Produto 3 da Marca Sebastian",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 4,
         name: "Produto 4 da Marca Sebastian",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 5,
         name: "Produto 5 da Marca Sebastian",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 6,
         name: "Produto 6 da Marca Sebastian",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     
 ]
@@ -168,42 +162,42 @@ export const ProductWella = [
         name: "Produto 1 da Marca Wella",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 2,
         name: "Produto 2 da Marca Wella",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 3,
         name: "Produto 3 da Marca Wella",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 4,
         name: "Produto 4 da Marca Wella",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 5,
         name: "Produto 5 da Marca Wella",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 6,
         name: "Produto 6 da Marca Wella",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
 ]
 
@@ -218,42 +212,49 @@ export const ProductVictoriaSecrets = [
         name: "Produto 1 Victoria Secrets",
         price: 25.00,
         image: product_victoria_1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 2,
         name: "Produto 2 Victoria Secrets",
         price: 25.00,
         image: product_victoria_2,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 3,
         name: "Produto 3 Victoria Secrets",
         price: 25.00,
         image: product_victoria_3,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 4,
         name: "Produto 4 Victoria Secrets",
         price: 25.00,
         image: product_victoria_4,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 5,
         name: "Produto 5 Victoria Secrets",
         price: 25.00,
         image: product_victoria_5,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 6,
         name: "Produto 6 Victoria Secrets",
         price: 25.00,
         image: product_victoria_6,
-        hasStock: true,
+        description: "Descrição x"
+    },
+    {
+        id: 7,
+        name: "Produto 7 Victoria Secrets",
+        price: 25.00,
+        image: product_victoria_7,
+        description: "Descrição x"
     },
 
 ]
@@ -269,42 +270,42 @@ export const ProductBadyeBodyWorks = [
         name: "Produto 1 da Marca Bady & Body Works",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 2,
         name: "Produto 2 da Marca Bady & Body Works",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 3,
         name: "Produto 3 da Marca Bady & Body Works",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 4,
         name: "Produto 4 da Marca Bady & Body Works",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 5,
         name: "Produto 5 da Marca Bady & Body Works",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 6,
         name: "Produto 6 da Marca Bady & Body Works",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
 ]
 
@@ -320,42 +321,42 @@ export const ProductBadyeBodyWorks = [
         name: "Produto 1 da Marca Truss",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 2,
         name: "Produto 2 da Marca Truss",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 3,
         name: "Produto 3 da Marca Truss",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 4,
         name: "Produto 4 da Marca Truss",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 5,
         name: "Produto 5 da Marca Truss",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 6,
         name: "Produto 6 da Marca Truss",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
 ]
 
@@ -370,42 +371,42 @@ export const ProductImportedPerfumes = [
         name: "Produto 1 de Perfumes Importados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 2,
         name: "Produto 2 de Perfumes Importados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 3,
         name: "Produto 3 de Perfumes Importados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 4,
         name: "Produto 4 de Perfumes Importados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 5,
         name: "Produto 5 de Perfumes Importados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 6,
         name: "Produto 6 de Perfumes Importados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
 ]
 
@@ -420,42 +421,42 @@ export const ProductVariedades = [
         name: "Produto 1 de Variedades",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 2,
         name: "Produto 2 de Variedades",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 3,
         name: "Produto 3 de Variedades",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 4,
         name: "Produto 4 de Variedades",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 5,
         name: "Produto 5 de Variedades",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 6,
         name: "Produto 6 de Variedades",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
 ]
 
@@ -470,49 +471,49 @@ export const ProductLoreal = [
         name: "Produto 1 da Marca Loreal",
         price: 25.00,
         image: product_loreal_1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 2,
         name: "Produto 2 da Marca Loreal",
         price: 25.00,
         image: product_loreal_2,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 3,
         name: "Produto 3 da Marca Loreal",
         price: 25.00,
         image: product_loreal_3,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 4,
         name: "Produto 4 da Marca Loreal",
         price: 25.00,
         image: product_loreal_4,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 5,
         name: "Produto 5 da Marca Loreal",
         price: 25.00,
         image: product_loreal_5,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 6,
         name: "Produto 6 da Marca Loreal",
         price: 25.00,
         image: product_loreal_6,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 7,
         name: "Produto 7 da Marca Loreal",
         price: 25.00,
         image: product_loreal_7,
-        hasStock: true,
+        description: "Descrição x"
     },
 ]
 
@@ -524,42 +525,42 @@ export const ProductBedHead = [
         name: "Produto 1 da Marca Bed Head",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 2,
         name: "Produto 2 da Marca Bed Head",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 3,
         name: "Produto 3 da Marca Bed Head",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 4,
         name: "Produto 4 da Marca Bed Head",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 5,
         name: "Produto 5 da Marca Bed Head",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 6,
         name: "Produto 6 da Marca Bed Head",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
 
 ]
@@ -572,42 +573,42 @@ export const ProductFractionals = [
         name: "Produto 1 que são Fracionados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 2,
         name: "Produto 2 que são Fracionados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 3,
         name: "Produto 3 que são Fracionados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 4,
         name: "Produto 4 que são Fracionados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 5,
         name: "Produto 5 que são Fracionados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
     {
         id: 6,
         name: "Produto 6 que são Fracionados",
         price: 25.00,
         image: imageProd1,
-        hasStock: true,
+        description: "Descrição x"
     },
 
 ]
